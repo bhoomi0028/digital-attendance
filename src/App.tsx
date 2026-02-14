@@ -21,6 +21,7 @@ const StartLecture = lazy(() => import("./pages/faculty/StartLecture"));
 const ViewLectures = lazy(() => import("./pages/faculty/ViewLectures"));
 const ViewAttendance = lazy(() => import("./pages/faculty/ViewAttendance"));
 const QRDisplay = lazy(() => import("./pages/faculty/QRDisplay"));
+const LectureAttendance = lazy(() => import("./pages/faculty/LectureAttendance"));
 const StudentDashboard = lazy(() => import("./pages/student/StudentDashboard"));
 const ScanQR = lazy(() => import("./pages/student/ScanQR"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -57,6 +58,7 @@ const App = () => (
               <Route path="/faculty/lectures" element={<ViewLectures />} />
               <Route path="/faculty/attendance" element={<ViewAttendance />} />
               <Route path="/faculty/qr/:lectureId" element={<QRDisplay />} />
+              <Route path="/faculty/lecture-attendance/:lectureId" element={<LectureAttendance />} />
 
               {/* Student Routes */}
               <Route path="/student" element={<StudentDashboard />} />

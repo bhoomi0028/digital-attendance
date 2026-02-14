@@ -4,7 +4,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { Lecture, subscribeToLectures, deactivateLecture } from '@/lib/database';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
-import { StopCircle } from 'lucide-react';
+import { StopCircle, ClipboardList } from 'lucide-react';
 import classroomBg from '@/assets/classroom-bg.jpg';
 
 export default function ViewLectures() {
@@ -115,6 +115,14 @@ export default function ViewLectures() {
                             )}
                           </td>
                           <td className="px-4 py-3 text-center space-x-2">
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              onClick={() => navigate(`/faculty/lecture-attendance/${lecture.id}`)}
+                            >
+                              <ClipboardList className="w-4 h-4 mr-1" />
+                              Attendance
+                            </Button>
                             {isActive && (
                               <>
                                 <Button
