@@ -49,9 +49,11 @@ export default function FacultyDashboard() {
       <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative z-10 min-h-screen flex flex-col">
-        {/* Header */}
         <header className="bg-gray-800 text-white px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="text-xl font-bold">Digital Scan</Link>
+          <div>
+            <Link to="/" className="text-xl font-bold">Digital Scan</Link>
+            <span className="block text-xs text-blue-300 font-medium tracking-wider uppercase">BCA Department</span>
+          </div>
           <nav className="flex items-center gap-6">
             <Link to="/faculty" className="hover:text-gray-300 transition-colors">Home</Link>
             <div className="relative group">
@@ -72,9 +74,15 @@ export default function FacultyDashboard() {
           </nav>
         </header>
 
-        {/* Main content */}
         <main className="flex-1 p-6">
           <div className="max-w-5xl mx-auto">
+            {/* Department Badge */}
+            <div className="text-center mb-4">
+              <span className="inline-block px-4 py-1 bg-blue-600/80 rounded-full text-sm font-medium text-white tracking-wide">
+                BCA Department — Faculty Panel
+              </span>
+            </div>
+
             {/* Location Bar */}
             <div className="location-bar mb-8">
               <h3 className="font-semibold">Faculty Location</h3>
@@ -84,9 +92,8 @@ export default function FacultyDashboard() {
               </p>
             </div>
 
-            {/* Action Cards - Top Row */}
+            {/* Action Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-              {/* Add Student */}
               <div className="action-card">
                 <UserPlus className="w-8 h-8 mx-auto mb-3" />
                 <h3 className="font-semibold text-lg mb-2">Add Student</h3>
@@ -96,7 +103,6 @@ export default function FacultyDashboard() {
                 </Button>
               </div>
 
-              {/* View Students */}
               <div className="action-card">
                 <Users className="w-8 h-8 mx-auto mb-3" />
                 <h3 className="font-semibold text-lg mb-2">View Students</h3>
@@ -106,7 +112,6 @@ export default function FacultyDashboard() {
                 </Button>
               </div>
 
-              {/* Start Lecture */}
               <div className="action-card">
                 <Play className="w-8 h-8 mx-auto mb-3" />
                 <h3 className="font-semibold text-lg mb-2">Start Lecture</h3>
@@ -117,19 +122,16 @@ export default function FacultyDashboard() {
               </div>
             </div>
 
-            {/* Action Cards - Bottom Row */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {/* View Lectures */}
               <div className="action-card">
                 <List className="w-8 h-8 mx-auto mb-3" />
                 <h3 className="font-semibold text-lg mb-2">View Lectures</h3>
-                <p className="text-sm text-gray-300 mb-4">View and manage scheduled lectures.</p>
+                <p className="text-sm text-gray-300 mb-4">View lectures & attendance chart.</p>
                 <Button asChild className="bg-primary hover:bg-primary/90">
                   <Link to="/faculty/lectures">View</Link>
                 </Button>
               </div>
 
-              {/* View Attendance */}
               <div className="action-card">
                 <ClipboardList className="w-8 h-8 mx-auto mb-3" />
                 <h3 className="font-semibold text-lg mb-2">View Attendance</h3>
@@ -139,7 +141,6 @@ export default function FacultyDashboard() {
                 </Button>
               </div>
 
-              {/* Register New Faculty */}
               <div className="action-card">
                 <UserCog className="w-8 h-8 mx-auto mb-3" />
                 <h3 className="font-semibold text-lg mb-2">Register Faculty</h3>
@@ -152,9 +153,8 @@ export default function FacultyDashboard() {
           </div>
         </main>
 
-        {/* Footer */}
         <footer className="bg-gray-800 text-white text-center py-4">
-          © 2026 Digital Scan | All Rights Reserved
+          © 2026 Digital Scan — BCA Department | All Rights Reserved
         </footer>
       </div>
     </div>
