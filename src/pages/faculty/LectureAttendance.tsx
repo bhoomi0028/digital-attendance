@@ -46,7 +46,10 @@ export default function LectureAttendance() {
 
       <div className="relative z-10 min-h-screen flex flex-col">
         <header className="bg-gray-800 text-white px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="text-xl font-bold">Digital Scan</Link>
+          <div>
+            <Link to="/" className="text-xl font-bold">Digital Scan</Link>
+            <span className="block text-xs text-blue-300 font-medium tracking-wider uppercase">BCA Department</span>
+          </div>
           <nav className="flex items-center gap-6">
             <Link to="/faculty" className="hover:text-gray-300 transition-colors">Home</Link>
             <div className="relative group">
@@ -72,6 +75,11 @@ export default function LectureAttendance() {
             {/* Lecture Info Card */}
             {lecture && (
               <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 mb-6 border border-white/20">
+                <div className="text-center mb-2">
+                  <span className="inline-block px-3 py-0.5 bg-blue-600/80 rounded-full text-xs font-medium text-white tracking-wide">
+                    BCA Department
+                  </span>
+                </div>
                 <h2 className="text-3xl font-bold text-white text-center italic mb-4">
                   {lecture.title} — Attendance
                 </h2>
@@ -150,7 +158,7 @@ export default function LectureAttendance() {
         </main>
 
         <footer className="bg-gray-800 text-white text-center py-4">
-          © 2026 Digital Scan | All Rights Reserved
+          © 2026 Digital Scan — BCA Department | All Rights Reserved
         </footer>
       </div>
     </div>

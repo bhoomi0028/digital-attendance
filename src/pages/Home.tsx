@@ -7,20 +7,22 @@ preloadLink.rel = 'preload';
 preloadLink.as = 'image';
 preloadLink.href = classroomBg;
 document.head.appendChild(preloadLink);
+
 export default function Home() {
   return (
     <div 
       className="min-h-screen bg-cover bg-center bg-no-repeat relative"
       style={{ backgroundImage: `url(${classroomBg})` }}
     >
-      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/40" />
 
-      {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Header */}
         <header className="bg-gray-800 text-white px-6 py-4 flex items-center justify-between">
-          <h1 className="text-xl font-bold">Digital Scan</h1>
+          <div>
+            <h1 className="text-xl font-bold">Digital Scan</h1>
+            <span className="text-xs text-blue-300 font-medium tracking-wider uppercase">BCA Department</span>
+          </div>
           <nav className="flex items-center gap-6">
             <Link to="/" className="hover:text-gray-300 transition-colors">Home</Link>
             <div className="relative group">
@@ -28,26 +30,19 @@ export default function Home() {
                 Login <span className="text-xs">▼</span>
               </button>
               <div className="absolute right-0 top-full mt-2 bg-white rounded shadow-lg py-2 min-w-[150px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-                <Link 
-                  to="/faculty-login" 
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-                >
-                  Faculty Login
-                </Link>
-                <Link 
-                  to="/student-login" 
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-                >
-                  Student Login
-                </Link>
+                <Link to="/faculty-login" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Faculty Login</Link>
+                <Link to="/student-login" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Student Login</Link>
               </div>
             </div>
           </nav>
         </header>
 
-        {/* Main content - centered login card */}
+        {/* Main content */}
         <main className="flex-1 flex items-center justify-center p-4">
           <div className="text-center text-white">
+            <div className="inline-block px-4 py-1 bg-blue-600/80 rounded-full text-sm font-medium mb-4 tracking-wide">
+              BCA Department
+            </div>
             <h2 className="text-4xl font-bold mb-4">Digital Attendance System</h2>
             <p className="text-xl mb-8 text-gray-200">Smart, Secure & QR-Based Attendance</p>
             
@@ -76,7 +71,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="bg-gray-800 text-white text-center py-4">
-          © 2026 Digital Scan | All Rights Reserved
+          © 2026 Digital Scan — BCA Department | All Rights Reserved
         </footer>
       </div>
     </div>
