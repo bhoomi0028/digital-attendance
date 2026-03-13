@@ -53,7 +53,10 @@ export default function FacultyLogin() {
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Header */}
         <header className="bg-gray-800 text-white px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="text-xl font-bold">Digital Scan</Link>
+          <div>
+            <Link to="/" className="text-xl font-bold">Digital Scan</Link>
+            <span className="block text-xs text-blue-300 font-medium tracking-wider uppercase">BCA Department</span>
+          </div>
           <nav className="flex items-center gap-6">
             <Link to="/" className="hover:text-gray-300 transition-colors">Home</Link>
             <Link to="/faculty-login" className="hover:text-gray-300 transition-colors">Login</Link>
