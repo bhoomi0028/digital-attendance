@@ -138,7 +138,7 @@ export default function StudentLogin() {
 
         {/* Footer */}
         <footer className="bg-gray-800 text-white text-center py-4">
-          © 2026 Digital Scan | All Rights Reserved
+          © 2026 Digital Scan — BCA Department | All Rights Reserved
         </footer>
       </div>
     </div>
